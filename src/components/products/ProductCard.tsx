@@ -43,7 +43,7 @@ export function ProductCard({ product, variant = 'default' }: ProductCardProps) 
   return (
     <div className="group bg-[var(--background-secondary)] rounded-xl border border-[var(--border)] overflow-hidden hover-lift">
       {/* Image */}
-      <Link href={`/products/${product.slug}`} className="block relative aspect-[4/3] bg-[var(--background-tertiary)] overflow-hidden">
+      <Link href={`/products/${product.slug}`} className="block relative aspect-[4/3] bg-[var(--background-tertiary)] overflow-hidden" aria-label={`View ${product.name} details`}>
         <Image
           src={product.image}
           alt={product.name}

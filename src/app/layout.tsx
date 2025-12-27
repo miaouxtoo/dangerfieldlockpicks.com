@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono, Bebas_Neue } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { OrganizationJsonLd, WebsiteJsonLd } from "@/components/seo/JsonLd";
 import { SITE_CONFIG } from "@/lib/constants";
 import "./globals.css";
+
+const GA_ID = "G-K44M2T9T1V";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -54,7 +57,7 @@ export const metadata: Metadata = {
     description: SITE_CONFIG.description,
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: SITE_CONFIG.name,
@@ -65,7 +68,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${SITE_CONFIG.name} - Professional Lock Pick Sets`,
     description: SITE_CONFIG.description,
-    images: ["/og-image.jpg"],
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,
@@ -88,8 +91,27 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Preconnect to external domains for performance */}
+        <link rel="preconnect" href="https://www.lockpickworld.com" />
+        <link rel="dns-prefetch" href="https://www.lockpickworld.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+
         <OrganizationJsonLd />
         <WebsiteJsonLd />
+
+        {/* Google Analytics */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} antialiased min-h-screen flex flex-col`}
