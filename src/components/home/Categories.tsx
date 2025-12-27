@@ -83,7 +83,7 @@ export function Categories() {
             {/* Image */}
             <div className="w-20 h-20 rounded-xl bg-[var(--background)] overflow-hidden relative shrink-0">
               <Image
-                src="https://www.lockpickworld.com/cdn/shop/files/base-machina-image-2000x2000.jpg?v=1765039534"
+                src="/images/products/machina-dark.png"
                 alt="Dangerfield MACHINA"
                 fill
                 className="object-contain p-2"
