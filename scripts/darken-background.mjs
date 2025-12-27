@@ -1,6 +1,5 @@
 import fs from "fs";
 import https from "https";
-import http from "http";
 
 const API_KEY = process.env.GEMINI_API_KEY;
 
@@ -11,8 +10,7 @@ if (!API_KEY) {
 
 function downloadImage(url) {
   return new Promise((resolve, reject) => {
-    const protocol = url.startsWith("https") ? https : http;
-    protocol.get(url, (response) => {
+    https.get(url, (response) => {
       const chunks = [];
       response.on("data", (chunk) => chunks.push(chunk));
       response.on("end", () => resolve(Buffer.concat(chunks)));
@@ -21,7 +19,7 @@ function downloadImage(url) {
   });
 }
 
-async function editImageWithGemini(imageBuffer, outputPath) {
+async function editImageWithGemini(imageBuffer, outputPath, prompt) {
   console.log(`Processing image for: ${outputPath}`);
 
   const base64Image = imageBuffer.toString("base64");
@@ -37,7 +35,7 @@ async function editImageWithGemini(imageBuffer, outputPath) {
             },
           },
           {
-            text: "Edit this product image: Change the background to a very dark charcoal/black color (#0A0A0B or nearly black) while preserving the product exactly as it is. Keep all product details, lighting, and quality intact. Only change the background color to dark.",
+            text: prompt,
           },
         ],
       },
@@ -76,6 +74,7 @@ async function editImageWithGemini(imageBuffer, outputPath) {
         }
       }
     }
+    console.log("No image in response");
     return false;
   } catch (error) {
     console.error("Error:", error.message);
@@ -84,6 +83,10 @@ async function editImageWithGemini(imageBuffer, outputPath) {
 }
 
 const images = [
+  {
+    url: "https://www.lockpickworld.com/cdn/shop/files/base-machina-image-2000x2000.jpg?v=1765039534",
+    output: "./public/images/products/machina-dark.png",
+  },
   {
     url: "https://www.lockpickworld.com/cdn/shop/files/machina-only-ssw1-2000x2000.jpg?v=1765039541",
     output: "./public/images/products/machina-side.png",
@@ -98,12 +101,13 @@ const images = [
   },
 ];
 
+const prompt = `Re-photograph this product with a dark, moody studio background. Keep the product exactly as it is with all text, branding, and details preserved. Just change the background to look like it was shot in a professional dark studio setting.`;
+
 for (const img of images) {
-  console.log(`Downloading: ${img.url}`);
+  console.log(`\nDownloading: ${img.url}`);
   const buffer = await downloadImage(img.url);
-  await editImageWithGemini(buffer, img.output);
-  // Small delay to avoid rate limiting
+  await editImageWithGemini(buffer, img.output, prompt);
   await new Promise((r) => setTimeout(r, 2000));
 }
 
-console.log("All images processed!");
+console.log("\nAll images processed!");
