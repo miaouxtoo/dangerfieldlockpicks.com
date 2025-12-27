@@ -222,16 +222,6 @@ export default function AboutPage() {
                 key={i}
                 className="p-6 bg-[var(--background-secondary)] rounded-xl border border-[var(--border)]"
               >
-                <div className="w-10 h-10 rounded-lg bg-[var(--accent)]/10 flex items-center justify-center mb-4">
-                  <svg
-                    className="w-5 h-5 text-[var(--accent)]"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
                 <h3 className="text-lg font-semibold text-[var(--foreground)] mb-2">
                   {item.title}
                 </h3>
@@ -262,33 +252,18 @@ export default function AboutPage() {
 
             <div className="grid sm:grid-cols-3 gap-6">
               <div className="p-6 bg-[var(--background)] rounded-xl border border-[var(--border)]">
-                <div className="w-10 h-10 rounded-lg bg-[var(--accent)]/10 flex items-center justify-center mb-3">
-                  <svg className="w-5 h-5 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                  </svg>
-                </div>
                 <h3 className="font-semibold text-[var(--foreground)]">Education First</h3>
                 <p className="text-sm text-[var(--foreground-muted)] mt-1">
                   Every product includes guides and tutorials
                 </p>
               </div>
               <div className="p-6 bg-[var(--background)] rounded-xl border border-[var(--border)]">
-                <div className="w-10 h-10 rounded-lg bg-[var(--accent)]/10 flex items-center justify-center mb-3">
-                  <svg className="w-5 h-5 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
                 <h3 className="font-semibold text-[var(--foreground)]">Tested Extensively</h3>
                 <p className="text-sm text-[var(--foreground-muted)] mt-1">
                   On hundreds of real-world locks
                 </p>
               </div>
               <div className="p-6 bg-[var(--background)] rounded-xl border border-[var(--border)]">
-                <div className="w-10 h-10 rounded-lg bg-[var(--accent)]/10 flex items-center justify-center mb-3">
-                  <svg className="w-5 h-5 text-[var(--accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
                 <h3 className="font-semibold text-[var(--foreground)]">Community Driven</h3>
                 <p className="text-sm text-[var(--foreground-muted)] mt-1">
                   Refined with feedback from professionals
