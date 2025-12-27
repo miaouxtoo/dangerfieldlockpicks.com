@@ -14,12 +14,12 @@ export const products: Product[] = [
     category: 'electric-pick-guns',
     rating: 5,
     reviewCount: 6,
-    image: '/images/products/machina-dark.png',
+    image: 'https://www.lockpickworld.com/cdn/shop/files/base-machina-image-2000x2000.jpg?v=1765039534',
     images: [
-      '/images/products/machina-dark.png',
-      '/images/products/machina-side.png',
-      '/images/products/machina-boxed.png',
-      '/images/products/machina-case.png',
+      'https://www.lockpickworld.com/cdn/shop/files/base-machina-image-2000x2000.jpg?v=1765039534',
+      'https://www.lockpickworld.com/cdn/shop/files/machina-only-ssw1-2000x2000.jpg?v=1765039541',
+      'https://www.lockpickworld.com/cdn/shop/files/machina-boxed-closeup-2-2000x2000.jpg?v=1765039545',
+      'https://www.lockpickworld.com/cdn/shop/files/machina-case-2048x2048_28c2581d-47b6-446e-9c63-192eb517aedd.jpg?v=1765039576',
     ],
     features: [
       'Professional-grade 13,000 RPM motor',
@@ -427,7 +427,7 @@ export const categories: Category[] = [
     id: 'electric-pick-guns',
     name: 'Electric Pick Guns',
     description: 'Professional-grade electric lock pick guns for rapid, reliable entry.',
-    image: '/images/products/machina-dark.png',
+    image: 'https://www.lockpickworld.com/cdn/shop/files/base-machina-image-2000x2000.jpg?v=1765039534',
     productCount: products.filter(p => p.category === 'electric-pick-guns').length,
   },
   {
