@@ -92,7 +92,7 @@ export default function GuidePage() {
                 Start Learning
               </Button>
               <Button
-                href={generateUTMLink(`${SITE_CONFIG.lockpickworldUrl}/products/dangerfield-how-to-pick-locks-guidebook`, 'guide')}
+                href={generateUTMLink(`${SITE_CONFIG.lockpickworldUrl}/products/lock-picking-book-beginners-visual-guide`, 'guide')}
                 external
                 variant="outline"
               >

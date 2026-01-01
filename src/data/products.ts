@@ -79,7 +79,7 @@ export const products: Product[] = [
     badge: 'bestseller',
     inStock: false,
     tier: 1,
-    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-praxis-lock-pick-set',
+    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-praxis-dual-gauge-21-piece-complete-lock-pick-set',
   },
   {
     id: 'skeleton',
@@ -145,7 +145,7 @@ export const products: Product[] = [
     badge: 'popular',
     inStock: true,
     tier: 2,
-    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-serenity-lock-pick-set',
+    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-serenity-picks',
   },
   {
     id: 'polaris',
@@ -169,7 +169,7 @@ export const products: Product[] = [
     ],
     inStock: true,
     tier: 2,
-    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-polaris-lock-pick-rakes',
+    lockpickworldUrl: 'https://www.lockpickworld.com/products/lock-pick-rakes-polaris-dangerfield',
   },
   {
     id: 'nano-covert',
@@ -194,7 +194,7 @@ export const products: Product[] = [
     ],
     inStock: true,
     tier: 2,
-    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-nano-covert-edc-rake-set',
+    lockpickworldUrl: 'https://www.lockpickworld.com/products/polaris-nano-the-ultimate-covert-mini-rake-set-leather-wallet',
   },
 
   // Tier 3: Practice & Learning
@@ -222,7 +222,7 @@ export const products: Product[] = [
     badge: 'bestseller',
     inStock: true,
     tier: 3,
-    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-clear-practice-locks-3-pack',
+    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-training-practice-locks-for-lock-pickers-set-of-three',
   },
   {
     id: 'aluminum-repinnable',
@@ -247,7 +247,7 @@ export const products: Product[] = [
     badge: 'professional',
     inStock: true,
     tier: 3,
-    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-aluminum-repinnable-practice-lock',
+    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-aluminum-brushed-double-repinnable-lock',
   },
   {
     id: 'infinitus',
@@ -271,7 +271,7 @@ export const products: Product[] = [
     ],
     inStock: true,
     tier: 3,
-    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-infinitus-repinnable-cutaway-lock',
+    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-infinitus-repinnable-training-lock-reversed-tweezers',
   },
   {
     id: 'clear-acrylic',
@@ -294,7 +294,7 @@ export const products: Product[] = [
     ],
     inStock: true,
     tier: 3,
-    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-clear-acrylic-practice-lock',
+    lockpickworldUrl: 'https://www.lockpickworld.com/products/clear-acrylic-practice-lock-standard-pins',
   },
 
   // Tier 4: Accessories & Tools
@@ -320,7 +320,7 @@ export const products: Product[] = [
     badge: 'popular',
     inStock: true,
     tier: 4,
-    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-tok-tension-wrench-set',
+    lockpickworldUrl: 'https://www.lockpickworld.com/products/4pc-flat-pry-bar-tension-wrench-set',
   },
   {
     id: 'tok-extended',
@@ -343,7 +343,7 @@ export const products: Product[] = [
     ],
     inStock: true,
     tier: 4,
-    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-extended-tok-tension-wrench-set',
+    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-8-piece-tok-wrench-extreme-case',
   },
   {
     id: 'bogota',
@@ -366,7 +366,7 @@ export const products: Product[] = [
     ],
     inStock: true,
     tier: 4,
-    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-bogota-picks',
+    lockpickworldUrl: 'https://www.lockpickworld.com/products/bogota-lock-picks-dangerfield',
   },
   {
     id: 'zedwrench',
@@ -388,7 +388,7 @@ export const products: Product[] = [
     ],
     inStock: true,
     tier: 4,
-    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-zedwrench-tension-tool',
+    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-zedwrench',
   },
   {
     id: 'guidebook',
@@ -411,7 +411,7 @@ export const products: Product[] = [
     ],
     inStock: true,
     tier: 4,
-    lockpickworldUrl: 'https://www.lockpickworld.com/products/dangerfield-how-to-pick-locks-guidebook',
+    lockpickworldUrl: 'https://www.lockpickworld.com/products/lock-picking-book-beginners-visual-guide',
   },
 ];
 
